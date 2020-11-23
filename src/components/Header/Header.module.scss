@@ -1,4 +1,6 @@
 @import '../../styles/variables';
+@import '../../styles/mixins/oswald';
+@import '../../styles/mixins/sans-serif';
 
 .header {
 	height: 80px;
@@ -8,6 +10,11 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+
+		&.oswald {
+			@include Oswald($size: 22px, $weight: 400);
+		}
+
 		li {
 			color: $pink;
 		}
