@@ -1,24 +1,32 @@
 import React from 'react';
+import classnames from 'classnames'
 import Link from 'next/link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import styles from './Header.module.scss'
 
 export const Header = () => (
-	<header className={styles.header}>
-		<ul>
-			<li>
-				<Link href="/">
-						blog – richardzilahi.hu
-				</Link>
-			</li>
-		</ul>
-		<ul>
-			<li>
-				<Link href="https://github.com/zilahir">
-					<GitHubIcon htmlColor="#f4abc4" />
-				</Link>
-			</li>
-		</ul>
+	<header className={
+		classnames(
+			styles.header,
+			"hidden md:flex md:pl-10 md:pr-10 md:space-x-8 justify-center items-center",
+		)
+		}>
+		<div className="md:flex w-3/5 justify-between">
+			<ul>
+				<li>
+					<Link href="/">
+							blog – richardzilahi.hu
+					</Link>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<Link href="https://github.com/zilahir">
+						<GitHubIcon htmlColor="#f4abc4" />
+					</Link>
+				</li>
+			</ul>
+		</div>
 	</header>
 )
