@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 import classnames from 'classnames'
-import Link from 'next/link';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import Link from 'next/link'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import InstagramIcon from '@material-ui/icons/Instagram'
 
 import styles from './Header.module.scss'
 
@@ -20,10 +21,15 @@ export const Header = () => (
 					</Link>
 				</li>
 			</ul>
-			<ul>
+			<ul className="flex space-x-4">
 				<li>
 					<Link href="https://github.com/zilahir">
 						<GitHubIcon htmlColor="#f4abc4" />
+					</Link>
+				</li>
+				<li>
+					<Link href="https://www.instagram.com/richardzilahi/">
+						<InstagramIcon htmlColor="#f4abc4" />
 					</Link>
 				</li>
 			</ul>
