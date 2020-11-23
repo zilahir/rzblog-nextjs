@@ -3,20 +3,23 @@ import { getAllPostsForHome } from '../src/api/api'
 import styles from '../styles/Home.module.css'
 
 import Link from 'next/link'
+import { Layout } from '@/components/common/Layout'
 
 export default function Home({ allPosts }) {
   return (
-    <div className={styles.container}>
-      {
-        allPosts.length > 0 && (
-          allPosts.map(thisPost => (
-            <Link as={`/posts/${thisPost.slug}`} href={'/posts/[slug]'}>
-              {thisPost.title}
-            </Link>
-          ))
-        )
-      }
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        {
+          allPosts.length > 0 && (
+            allPosts.map(thisPost => (
+              <Link as={`/posts/${thisPost.slug}`} href={'/posts/[slug]'}>
+                {thisPost.title}
+              </Link>
+            ))
+          )
+        }
+        </div>
+    </Layout>
   )
 }
 
