@@ -12,10 +12,9 @@ export const Header = () => (
 	<header className={
 		classnames(
 			styles.header,
-			"md:flex md:pl-10 md:pr-10 md:space-x-8 justify-center items-center",
 		)
 		}>
-		<div className="md:flex w-3/5 justify-between">
+		<div className={styles.headerInner}>
 			<ul className={classnames(
 				styles.oswald,
 			)}>
@@ -25,7 +24,7 @@ export const Header = () => (
 					</Link>
 				</li>
 			</ul>
-			<ul className="hidden md:flex space-x-8">
+			<ul className="">
 				<li>
 					<Link href="https://github.com/zilahir">
 						<GitHubIcon htmlColor="#f4abc4" />

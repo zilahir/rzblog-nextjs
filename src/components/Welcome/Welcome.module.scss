@@ -1,0 +1,6 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/oswald';
+
+.welcome {
+  @include Oswald($size: 40px, $colour: $green, $weight: 700);
+}

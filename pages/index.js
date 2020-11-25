@@ -4,10 +4,12 @@ import styles from '../styles/Home.module.css'
 
 import Link from 'next/link'
 import { Layout } from '@/components/common/Layout'
+import { Welcome } from '@/components/Welcome'
 
 export default function Home({ allPosts }) {
   return (
     <Layout>
+      <Welcome />
       <div className={styles.container}>
         {
           allPosts.length > 0 && (

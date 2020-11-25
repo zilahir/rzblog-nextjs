@@ -1,15 +1,36 @@
 @import '../../styles/variables';
 @import '../../styles/mixins/oswald';
 @import '../../styles/mixins/sans-serif';
+@import '../../styles/mixins/media-queries';
 
 .header {
 	height: 80px;
 	background-color: $dark-blue;
+	display: flex;
+	justify-content: center;
+
+	.headerInner {
+		display: inherit;
+		flex: 1;
+		max-width: 960px;
+		margin: 0 100px;
+	}
 
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		display: flex;
+		flex: inherit;
+		align-items: center;
+
+		&:last-of-type {
+			@include smMax {
+				display: none;
+			}
+			justify-content: flex-end;
+			gap: 30px;
+		}
 
 		&.oswald {
 			@include Oswald($size: 22px, $weight: 400);
