@@ -1,6 +1,30 @@
 @import '../../styles/variables';
 @import '../../styles/mixins/oswald';
+@import '../../styles/mixins/sans-serif';
+
+.welcomeContainer {
+  display: flex;
+  justify-content: center;
+
+  .welcomeContainerInner {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    max-width: 1160px;
+    margin: 0 100px;
+    justify-content: space-between;
+    padding: 100px 0;
+
+    div {
+      flex: 1;
+    }
+  }
+}
 
 .welcome {
   @include Oswald($size: 40px, $colour: $green, $weight: 700);
+}
+
+.desc {
+  @include SansSerif($size: 18px, $colour: #ffffff, $weight: 400);
 }
